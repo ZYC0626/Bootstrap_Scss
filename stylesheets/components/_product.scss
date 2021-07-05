@@ -1,0 +1,42 @@
+.prod-card {
+    .prod-img {
+        height: 310px;
+        position: relative;
+
+        .prod-tag {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            background: $primary;
+            writing-mode: vertical-rl;
+            padding: 16px 10px;
+            color: white;
+            letter-spacing: 5px;
+        }
+        .prod-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: $primary;
+            cursor: pointer;
+        }
+    }
+    .prod-btn {
+        color: $primary;
+        background: $primary-100;
+        padding: 16px;
+        font-weight: bold;
+    }
+}
+.prod-content {
+    text-align: center;
+    .prod-name {
+        padding: 14px 0;
+        border-left: 1px solid $primary-100;
+        border-right: 1px solid $primary-100;
+    }
+    .prod-price {
+        padding: 14px 0;
+        border-right: 1px solid $primary-100;
+    }
+}

@@ -1,0 +1,65 @@
+.forstedGlass-section {
+    @include media-breakpoint-up(md) {
+        margin-top: -90px;
+    }
+}
+.forstedGlass-item {
+    height: 256px;
+    color: white;
+    text-decoration: none;
+
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.5s;
+
+    //同level 出現相同class
+    & + .forstedGlass-item {
+        border-left: 1px solid white;
+    }
+
+    .forstedGlass-item-mask {
+        background-color: rgba($primary, 0.8);
+        transition: background-color linear 0.5s;
+        position: absolute;
+        z-index: -1;
+    }
+    .forstedGlass-item-text {
+        writing-mode: vertical-rl;
+        font-size: 24px;
+        letter-spacing: 10px;
+        font-weight: bold;
+    }
+    .forstedGlass-item-img {
+        position: absolute;
+        filter: blur(5px);
+        z-index: -2;
+        transition: all linear 0.5s;
+    }
+
+    &.active,
+    &:hover {
+        color: $primary;
+        .forstedGlass-item-mask {
+            background-color: rgba($contract, 0.8);
+        }
+        .forstedGlass-item-img {
+            filter: blur(0);
+            top: -20px;
+            bottom: -20px;
+            left: -20px;
+            right: -20px;
+        }
+    }
+}
+.break-y {
+    @include media-breakpoint-up(lg) {
+        margin-bottom: -24px;
+        margin-top: -24px;
+    }
+}

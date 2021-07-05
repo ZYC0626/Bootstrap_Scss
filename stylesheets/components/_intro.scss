@@ -1,0 +1,18 @@
+.intro {
+    background-color: $primary-100;
+    .intro-text {
+        @include media-breakpoint-up(lg) {
+            writing-mode: vertical-rl;
+            padding: 70px 0;
+        }
+        line-height: 2.5;
+        max-height: 420px;
+        padding: 30px;
+    }
+    .intro-image {
+        @include media-breakpoint-up(md) {
+            min-height: 300px;
+        }
+        min-height: 250px;
+    }
+}

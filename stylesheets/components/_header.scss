@@ -1,0 +1,18 @@
+.header {
+    .header-img {
+        height: 277px;
+        position: relative;
+        @include media-breakpoint-up(md) {
+            height: 496px;
+        }
+    }
+    .header-z-img {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        width: 59px;
+        @include media-breakpoint-up(md) {
+            width: 89px;
+        }
+    }
+}

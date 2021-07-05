@@ -1,0 +1,19 @@
+.cart-item-border-top {
+    & + .cart-item-border-top {
+        @include media-breakpoint-up(md) {
+            border-top: 1px solid $primary-100;
+        }
+    }
+}
+.cart-img {
+    width: 120px;
+    height: 80px;
+}
+.cart-md-img {
+    width: 157px;
+    height: 106px;
+    @include media-breakpoint-up(md) {
+        width: 110px;
+        height: 110px;
+    }
+}

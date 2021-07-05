@@ -1,0 +1,41 @@
+.imageKeyword {
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.spread {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.bg-cover {
+    background-size: cover;
+    background-position: center center;
+}
+.bg-primary-100 {
+    background: $primary-100;
+}
+.text-primary-100 {
+    color: $primary-100;
+}
+.text-primary-200 {
+    color: $primary-200;
+}
+.border-primary-100 {
+    border-color: $primary-100;
+}
+
+.bg-md-primary {
+    @include media-breakpoint-up(md) {
+        background: $primary;
+    }
+}
+.text-md-primary-100 {
+    color: $primary;
+    @include media-breakpoint-up(md) {
+        color: $primary-100;
+    }
+}

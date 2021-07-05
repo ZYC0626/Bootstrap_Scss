@@ -1,0 +1,86 @@
+$total-width: 200px;
+$total-md-width: 150px;
+
+$size: 18px;
+$line-width: $total-width / 2 - $size;
+$line-md-width: $total-md-width / 2 - $size;
+
+$color: $primary;
+$color-light: $primary-100;
+
+.process-step {
+
+    width: $total-md-width;
+    @include media-breakpoint-up(md) {
+        width: $total-width;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;// -2;
+
+    .process-step-item {
+        background: $color-light;
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: $size;
+        width: $size;
+        border: 1px solid $color-light;
+        border-radius: $size;
+
+        &.completed {
+            background: $color;
+            border-color: $color;
+        }
+        &.wait {
+            background: $color;
+        }
+
+        & + .process-step-item {
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: -3;
+                top: 50%;
+                right: $size - 2px;
+                width: $line-md-width;
+                @include media-breakpoint-up(md) {
+                    width: $line-width;
+                }
+                height: 1px;
+                background-color: $color-light;
+            }
+        }
+        & + .process-step-item.completed {
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: -3;
+                top: 50%;
+                right: $size - 2px;
+                width: $line-md-width; //$size * 5;
+                @include media-breakpoint-up(md) {
+                    width: $line-width;
+                }
+                height: 1px;
+                background-color: $color;
+            }
+        }
+    }
+    .material-icons {
+        font-size: $size;
+        color: $color;
+    }
+    .material-icons.md-light {
+        color: white;
+    }
+    .material-icons.active {
+        font-family: "Material Icons Outlined";
+    }
+}
